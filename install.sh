@@ -10,3 +10,4 @@ oc create -f pgsql-storage.yml
 oc new-app registry.redhat.io/rhel8/postgresql-10 --name=postgres --source-secret=threescale-registry-auth -e POSTGRESQL_USER=redhat -e POSTGRESQL_PASSWORD=redhat -e POSTGRESQL_DATABASE=system
 
 # Install Apicurio
+oc create -f apicurio.yml --values-to-fill
